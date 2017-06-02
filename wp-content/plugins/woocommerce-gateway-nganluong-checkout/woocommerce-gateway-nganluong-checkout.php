@@ -14,9 +14,9 @@ ini_set('display_errors', true);
 add_action('plugins_loaded', 'woocommerce_payment_nganluong_init', 0);
 add_action('parse_request', array('WC_Gateway_NganLuong', 'nganluong_return_handler'));
 class importAlepay {
-    public function __construct() {
-        include( 'Lib/Alepay.php' );
-    }
+   public function __construct() {
+       include( 'Lib/Alepay.php' );
+   }
 }
 new importAlepay();
 // Hook in

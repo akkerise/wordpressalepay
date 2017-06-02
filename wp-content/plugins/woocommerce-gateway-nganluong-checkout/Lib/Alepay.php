@@ -2,12 +2,8 @@
 define('DS', str_replace('\\','/',DIRECTORY_SEPARATOR ));
 define('ROOT_PATH',dirname(__FILE__));
 include(ROOT_PATH . DS . 'Utils/AlepayUtils.php');
-class importAlepayUtils {
-    public function __construct() {
-        include( 'Utils/AlepayUtils.php' );
-    }
-}
-new importAlepayUtils();
+//echo "<pre>";var_dump(ROOT_PATH . DS . 'Utils/AlepayUtils.php');echo "</pre>";exit();
+//new importAlepayUtils();
 /*
  * Alepay class
  * Implement with Alepay service

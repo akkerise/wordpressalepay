@@ -1,11 +1,11 @@
 <?php
 include(ROOT_PATH . DS . 'Crypt/RSA.php');
-class importAlepay {
-    public function __construct() {
-        include( 'Crypt/RSA.php' );
-    }
-}
-new importAlepay();
+//class importAlepay {
+//    public function __construct() {
+//        include( 'Crypt/RSA.php' );
+//    }
+//}
+//new importAlepay();
 class AlepayUtils {
     
     function encryptData($data, $publicKey) {
