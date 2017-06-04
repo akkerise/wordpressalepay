@@ -1,0 +1,41 @@
+
+_php:S107"HThis function has 25 parameters, which is greater than the 7 authorized.(‡ØŞüÿÿÿÿ
+Zphp:S107"HThis function has 17 parameters, which is greater than the 7 authorized.(‡¦½Æ
+Zphp:S107"HThis function has 11 parameters, which is greater than the 7 authorized.(ÊÎ¹Í
+J	php:S1144"7Remove this unused private "createCheckoutData" method.(´à–¼
+Q	php:S1144">Remove this unused private "createRequestCardLinkData" method.(ö¡ÜÏ
+Z	php:S1144"BRemove this unused private "createTokenizationPaymentData" method.(­õÇıÿÿÿÿ
+Xphp:S112"FDefine and throw a dedicated exception instead of using a generic one.(ìÕ»é
+]php:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÚÍöšşÿÿÿÿ
+]php:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ğ­ìèúÿÿÿÿ
+]php:S112"FDefine and throw a dedicated exception instead of using a generic one.(ê¸¸Îüÿÿÿÿ
+Xphp:S112"FDefine and throw a dedicated exception instead of using a generic one.(ûƒøı
+g	php:S1192"ODefine a constant instead of duplicating this literal "requestPayment" 3 times.(Úˆø„ÿÿÿÿÿ
+]	php:S1192"JDefine a constant instead of duplicating this literal "buyerCity" 3 times.(ããõú
+\	php:S1192"IDefine a constant instead of duplicating this literal "currency" 5 times.(˜È•Ù
+]	php:S1192"JDefine a constant instead of duplicating this literal "buyerName" 3 times.(ÊŒË¡
+^	php:S1192"KDefine a constant instead of duplicating this literal "buyerEmail" 3 times.(ĞÌ‚¡
+`	php:S1192"MDefine a constant instead of duplicating this literal "checkoutType" 3 times.(™“æµ
+`	php:S1192"MDefine a constant instead of duplicating this literal "buyerAddress" 3 times.(ùÛ‚Ä
+d	php:S1192"LDefine a constant instead of duplicating this literal "callbackUrl" 4 times.(Àˆ˜ùÿÿÿÿ
+_	php:S1192"MDefine a constant instead of duplicating this literal "buyerCountry" 3 times.(¹õP
+c	php:S1192"KDefine a constant instead of duplicating this literal "buyerPhone" 3 times.(Ê»¨„úÿÿÿÿ
+`	php:S1192"MDefine a constant instead of duplicating this literal "paymentHours" 5 times.(àËç
+i	php:S1192"QDefine a constant instead of duplicating this literal "orderDescription" 5 times.(‚»·Ûÿÿÿÿÿ
+b	php:S1192"JDefine a constant instead of duplicating this literal "returnUrl" 5 times.(“½¦øÿÿÿÿ
+Z	php:S1192"GDefine a constant instead of duplicating this literal "amount" 5 times.(›µ™ç
+\	php:S1192"JDefine a constant instead of duplicating this literal "totalItem" 3 times.(ÑÏW
+]	php:S1192"JDefine a constant instead of duplicating this literal "cancelUrl" 5 times.(³àˆõ
+]	php:S1192"JDefine a constant instead of duplicating this literal "orderCode" 5 times.(ıªüû
+1php:S125"Remove this commented out code.(úÿÎ¤
+1php:S125"Remove this commented out code.(‰Ö† 
+1php:S125"Remove this commented out code.(ÏåµÊ
+1php:S125"Remove this commented out code.(ÏåµÊ
+1php:S125"Remove this commented out code.(¡ã
+6php:S125"Remove this commented out code.(èñÎùúÿÿÿÿ
+1php:S125"Remove this commented out code.(ÈÕ
+1php:S125"Remove this commented out code.(²ªİ
+r	php:S1488"_Immediately return this expression instead of assigning it to the temporary variable "$params".(Ş†”¾
+r	php:S1488"_Immediately return this expression instead of assigning it to the temporary variable "$params".(Ş†”¾
+r	php:S1488"_Immediately return this expression instead of assigning it to the temporary variable "$params".(Ş†”¾
+y	php:S1488"fImmediately return this expression instead of assigning it to the temporary variable "$dataDecrypted".(ÿ«“©

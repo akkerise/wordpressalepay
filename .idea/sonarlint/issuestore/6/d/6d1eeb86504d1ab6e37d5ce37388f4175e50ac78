@@ -1,0 +1,40 @@
+
+_	php:S1192"LDefine a constant instead of duplicating this literal "callbackUrl" 3 times.(Õó¯¼
+H	php:S1068"0Remove this unused "$secure_pass" private field.(™ öàøÿÿÿÿ
+I	php:S1481"1Remove this unused "$woocommerce" local variable.(üíäşÿÿÿÿ
+O	php:S1481"0Remove this unused "$old_status" local variable.(®°À£ÿÿÿÿÿ8²ïÂ†Ç+
+A	php:S1068".Remove this unused "$debug_md5" private field.(›´Ğ„
+d	php:S1192"LDefine a constant instead of duplicating this literal "SERVER_PORT" 4 times.(µ“²şÿÿÿÿ
+­	php:S1192"™Define a constant instead of duplicating this literal "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIh+tv4h3y4piNwwX2WaDa7lo0uL7bo7vzp6xxNFc92HIOAo6WPZ8fT+EXURJzORhbUDhedp8B9wDsjgJDs9yrwoOYNsr+c3x8kH4re+AcBx/30RUwWve8h/VenXORxVUHEkhC61Onv2Y9a2WbzdT9pAp8c/WACDPkaEhiLWCbbwIDAQAB" 4 times.(®Ä…Í
+6php:S125"Remove this commented out code.(Ï¯İÛşÿÿÿÿ
+1php:S125"Remove this commented out code.(æ¾Ù
+[	php:S1192"HDefine a constant instead of duplicating this literal "http://" 4 times.(”ÕÑ‡
+1php:S125"Remove this commented out code.(œ×İ›
+zphp:S122"\4 statements were found on this line. Reformat the code to have only one statement per line.(–Ğ¿Ÿúÿÿÿÿ8±íê†Ç+
+g	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 42 to the 15 allowed.(¨…é
+`	php:S1192"MDefine a constant instead of duplicating this literal "checksum_key" 4 times.(­ØûŞ
+6php:S125"Remove this commented out code.(øË÷ûÿÿÿÿ
+e	php:S1192"MDefine a constant instead of duplicating this literal "woocommerce" 23 times.(Ï³¶¤úÿÿÿÿ
+¥php:S138"’This function "woocommerce_payment_nganluong_init" has 342 lines, which is greater than the 150 lines authorized. Split it into smaller functions.(¨…é
+`	php:S1192"HDefine a constant instead of duplicating this literal "default" 5 times.(Ë—Ê£ıÿÿÿÿ
+_	php:S1192"LDefine a constant instead of duplicating this literal "description" 9 times.(àŠüë
+]	php:S1192"KDefine a constant instead of duplicating this literal "encryptKey" 3 times.(í¤Q
+Z	php:S1192"GDefine a constant instead of duplicating this literal "title" 13 times.(¨ñİ
+Z	php:S1192"GDefine a constant instead of duplicating this literal "apiKey" 3 times.(ù·üè
+C	php:S1481"0Remove this unused "$encryptKey" local variable.(®Ä…Í
+_	php:S1192"LDefine a constant instead of duplicating this literal "checksumKey" 3 times.(‘üıƒ
+1php:S125"Remove this commented out code.(¿Şïè
+Bphp:S121"0Add curly braces around the nested statement(s).(Î®¼–
+i	php:S1192"QDefine a constant instead of duplicating this literal "redirect_page_id" 5 times.(œ·œøÿÿÿÿ
+Gphp:S121"0Add curly braces around the nested statement(s).(«‰Ó÷ûÿÿÿÿ
+Bphp:S121"0Add curly braces around the nested statement(s).(ı˜à‘
+>	php:S1481"+Remove this unused "$order" local variable.(êà¬˜
+g	php:S1117"MRename "$orderCode" which has the same name as the field declared at line 64.(ÿúà®8Û½ñ†Ç+
+D	php:S1068"1Remove this unused "$debug_params" private field.(¤À¶Õ
+J	php:S1068"7Remove this unused "$merchant_site_code" private field.(·ÄØ¼
+`	php:S1192"HDefine a constant instead of duplicating this literal "api_key" 4 times.(ÓğÎøÿÿÿÿ
+_	php:S1192"LDefine a constant instead of duplicating this literal "encrypt_key" 4 times.(¯ÉÂ¢
+lphp:S101"URename class "WC_Gateway_Alepay" to match the regular expression ^[A-Z][a-zA-Z0-9]*$.(ŠÑ£óùÿÿÿÿ
+_	php:S1192"LDefine a constant instead of duplicating this literal "SERVER_NAME" 4 times.(”ÕÑ‡
+6php:S125"Remove this commented out code.(ÊŒàüøÿÿÿÿ
+F	php:S1481".Remove this unused "$checksum" local variable.(Çó›æúÿÿÿÿ

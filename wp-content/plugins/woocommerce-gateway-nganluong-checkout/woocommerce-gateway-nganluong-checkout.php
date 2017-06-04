@@ -8,17 +8,28 @@
  * Author: Đức LM(0948389111) - Thanh NA (0968381829)
  * Author URI: http://www.webckk.com/
  */
-
-
+include_once (plugin_dir_path( __FILE__ ). 'Lib/Alepay.php');
+$callbackUrl = 'http://' . $_SERVER['SERVER_NAME'];
+if ($_SERVER['SERVER_PORT'] != '80') {
+    $callbackUrl = $callbackUrl . ':' . $_SERVER['SERVER_PORT'];
+}
+$uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+$encryptKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIh+tv4h3y4piNwwX2WaDa7lo0uL7bo7vzp6xxNFc92HIOAo6WPZ8fT+EXURJzORhbUDhedp8B9wDsjgJDs9yrwoOYNsr+c3x8kH4re+AcBx/30RUwWve8h/VenXORxVUHEkhC61Onv2Y9a2WbzdT9pAp8c/WACDPkaEhiLWCbbwIDAQAB";
+$callbackUrl = $callbackUrl . $uri_parts[0];
+define('ENDCRYPT_KEY', 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIh+tv4h3y4piNwwX2WaDa7lo0uL7bo7vzp6xxNFc92HIOAo6WPZ8fT+EXURJzORhbUDhedp8B9wDsjgJDs9yrwoOYNsr+c3x8kH4re+AcBx/30RUwWve8h/VenXORxVUHEkhC61Onv2Y9a2WbzdT9pAp8c/WACDPkaEhiLWCbbwIDAQAB');
+define('API_KEY', '0COVspcyOZRNrsMsbHTdt8zesP9m0y');
+define('CHECKSUM_KEY' , 'hjuEmsbcohOwgJLCmJlf7N2pPFU1Le');
+define('CALLBACK_URL', $callbackUrl);
 ini_set('display_errors', true);
 add_action('plugins_loaded', 'woocommerce_payment_nganluong_init', 0);
-add_action('parse_request', array('WC_Gateway_NganLuong', 'nganluong_return_handler'));
-class importAlepay {
-   public function __construct() {
-       include( 'Lib/Alepay.php' );
-   }
-}
-new importAlepay();
+add_action('parse_request', array('WC_Gateway_Alepay', 'alepay_return_handler'));
+$alepay = new Alepay(array(
+    // db test
+    "apiKey" => "0COVspcyOZRNrsMsbHTdt8zesP9m0y",
+    "encryptKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIh+tv4h3y4piNwwX2WaDa7lo0uL7bo7vzp6xxNFc92HIOAo6WPZ8fT+EXURJzORhbUDhedp8B9wDsjgJDs9yrwoOYNsr+c3x8kH4re+AcBx/30RUwWve8h/VenXORxVUHEkhC61Onv2Y9a2WbzdT9pAp8c/WACDPkaEhiLWCbbwIDAQAB",
+    "checksumKey" => "hjuEmsbcohOwgJLCmJlf7N2pPFU1Le",
+    "callbackUrl" => $callbackUrl
+));
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 // Our hooked in function - $fields is passed via the filter!
@@ -28,25 +39,15 @@ function custom_override_checkout_fields( $fields ) {
 //    $fields['billing']['billing_first_name']['name'] = 'billing_full_name';
     return $fields;
 }
-
-//define('URL_API', 'http://sandbox.nganluong.vn:8088/nl30/checkout.api.nganluong.post.php'); // Đường dẫn gọi api
-//define('RECEIVER', 'demo@nganluong.vn'); // Email tài khoản ngân lượng
-//define('MERCHANT_ID', '36680'); // Mã merchant kết nối
-//define('MERCHANT_PASS', 'matkhauketnoi'); // Mật khẩu kết nôi
-//define('MERCHANT_ID', '30439');
-//define('MERCHANT_PASS', '212325');
-//define('RECEIVER', 'nguyencamhue@gmail.com');
-
 function woocommerce_payment_nganluong_init()
 {
     if (!class_exists('WC_Payment_Gateway'))
         return;
 
-    class WC_Gateway_NganLuong extends WC_Payment_Gateway
+    class WC_Gateway_Alepay extends WC_Payment_Gateway
     {
 
         // URL checkout của nganluong.vn - Checkout URL for Ngan Luong
-        private $nganluong_url;
         // Mã merchant site code
         private $merchant_site_code;
         // Mật khẩu bảo mật - Secure password
@@ -55,8 +56,13 @@ function woocommerce_payment_nganluong_init()
         private $debug_params;
         private $debug_md5;
         private $merchant_id;
-        private $nlcheckout_copy;
         private $status_order;
+        private $api_key;
+//        private $token_key;
+        private $encrypt_key;
+        private $checksum_key;
+        private $orderCode;
+
         function __construct()
         {
             $this->icon = @$this->settings['icon']; // Icon URL
@@ -69,14 +75,16 @@ function woocommerce_payment_nganluong_init()
 
             $this->title = $this->settings['title'];
             $this->description = $this->settings['description'];
-            $this->nganluong_url = $this->settings['nganluong_url'];
-            $this->merchant_site_code = $this->settings['merchant_site_code'];
+            $this->api_key = $this->settings['api_key'];
+            $this->checksum_key = $this->settings['checksum_key'];
+//            $this->token_key = $this->settings['token_key'];
+            $this->encrypt_key = $this->settings['encrypt_key'];
             $this->merchant_id = $this->settings['merchant_id'];
-            $this->secure_pass = $this->settings['secure_pass'];
             $this->redirect_page_id = $this->settings['redirect_page_id'];
             $this->status_order = $this->settings['status_order'];
+
             $this->debug = @$this->settings['debug'];
-            $this->order_button_text = __('Proceed to Ngân Lượng', 'woocommerce');
+            $this->order_button_text = __('Proceed to Alepay', 'woocommerce');
             $this->msg['message'] = "";
             $this->msg['class'] = "";
             // Add the page after checkout to redirect to Ngan Luong
@@ -108,19 +116,19 @@ function woocommerce_payment_nganluong_init()
                     'title' => __('Name', 'woocommerce'),
                     'type' => 'text',
                     'description' => __('Tên phương thức thanh toán ( khi khách hàng chọn phương thức thanh toán )', 'woocommerce'),
-                    'default' => __('NganLuongVN', 'woocommerce')),
+                    'default' => __('AlepayVN', 'woocommerce')),
                 'icon' => array(
                     'title' => __('Icon', 'woocommerce'),
                     'type' => 'text',
                     'description' => __('Icon phương thức thanh toán', 'woocommerce'),
-                    'default' => __('https://www.nganluong.vn/css/checkout/version20/images/logoNL.png', 'woocommerce')),
+                    'default' => __('https://alepay.vn/images/alego-Logo.png', 'woocommerce')),
                 'description' => array(
                     'title' => __('Mô tả', 'woocommerce'),
                     'type' => 'textarea',
                     'description' => __('Mô tả phương thức thanh toán.', 'woocommerce'),
-                    'default' => __('Click place order and you will be directed to the Ngan Luong website in order to make payment', 'woocommerce')),
+                    'default' => __('Click place order and you will be directed to the Alepay website in order to make payment', 'woocommerce')),
                 'merchant_id' => array(
-                    'title' => __('NganLuong.vn email address', 'woocommerce'),
+                    'title' => __('Alepay.vn email address', 'woocommerce'),
                     'type' => 'text',
                     'description' => __('Đây là tài khoản NganLuong.vn (Email) để nhận tiền')),
                 'redirect_page_id' => array(
@@ -141,24 +149,37 @@ function woocommerce_payment_nganluong_init()
                     'default' => 'vnd',
                     'description' => __('"vnd" or "usd"', 'woocommerce')
                 ),
-                'nganluong_url' => array(
-                    'title' => __('Ngan Luong URL', 'woocommerce'),
+                'api_key' => array(
+                    'title' => __('API KEY', 'woocommerce'),
                     'type' => 'text',
-                    'description' => __('"https://www.nganluong.vn/checkout.php"', 'woocommerce')
                 ),
-                'merchant_site_code' => array(
-                    'title' => __('Merchant Site Code', 'woocommerce'),
-                    'type' => 'text'
+//                'token_key' => array(
+//                    'title' => __('TOKEN KEY', 'woocommerce'),
+//                    'type' => 'text',
+//                ),
+                'checksum_key' => array(
+                    'title' => __('CHECKSUM KEY', 'woocommerce'),
+                    'type' => 'text',
                 ),
-                'secure_pass' => array(
-                    'title' => __('Secure Password', 'woocommerce'),
-                    'type' => 'password'
+                'encrypt_key' => array(
+                    'title' => __('ENCRYPT KEY', 'woocommerce'),
+                    'type' => 'text',
                 ),
-//                'version' => array(
-//                    'title' => __('Ngân Lượng Version' ,'woocommerce'),
-//                    'type' => 'select',
-//                    'options' => array( 'version2' => 'Version2.0', 'version3.1' => 'version3.1'),
-////                    'label' => __('Ngân Lượng Version', 'woocommerce'),
+//                'alepay_url' => array(
+//                    'title' => __('Alepay URL', 'woocommerce'),
+//                    'type' => 'text',
+//                ),
+//                'check_sum' => array(
+//                    'title' => __('API KEY', 'woocommerce'),
+//                    'type' => 'text',
+//                ),
+//                'merchant_site_code' => array(
+//                    'title' => __('Merchant Site Code', 'woocommerce'),
+//                    'type' => 'text'
+//                ),
+//                'secure_pass' => array(
+//                    'title' => __('Secure Password', 'woocommerce'),
+//                    'type' => 'password'
 //                )
             );
         }
@@ -170,8 +191,6 @@ function woocommerce_payment_nganluong_init()
         {
             if ($this->description)
                 echo wpautop(wptexturize(__($this->description, 'woocommerce')));
-            echo '<br>';
-            require_once 'template.php';
         }
 
         /**
@@ -182,22 +201,32 @@ function woocommerce_payment_nganluong_init()
         public function process_payment($order_id)
         {
             $order = wc_get_order($order_id);
-//            echo "<pre>";var_dump($order);echo "</pre>";exit();
-            $checkouturl = $this->generate_NganLuongVN_url($order_id);
-            echo "<pre>";var_dump(json_decode($checkouturl));echo "</pre>";exit();
-            $this->log($checkouturl);
-            //  echo $checkouturl;
-            // die();
+            $checkouturl = $this->generate_Alepay_url($order_id);
+
+            if (isset($checkouturl->token)){
+                global $wpdb;
+                $current_user  = wp_get_current_user();
+                $payment_token_data = [
+                    'gateway_id' => parse_url($checkouturl->checkoutUrl)['host'],
+                    'token' => $checkouturl->token,
+                    'user_id' => $current_user->ID,
+                    'type' => gettype($checkouturl->token)
+                ];
+                $wpdb->insert('woocommerce_payment_tokens', $payment_token_data);
+            }
+            // Save token for database
+            foreach ($checkouturl as $k => $v){
+                $this->log($k . '=>' . $v);
+            }
             return array(
                 'result' => 'success',
-                'redirect' => $checkouturl
+                'redirect' => (string)$checkouturl->checkoutUrl
             );
         }
 
-        function generate_NganLuongVN_url($order_id)
+        function generate_Alepay_url($order_id)
         {
-            // This is from the class provided by Ngan Luong. Not advisable to mess.
-//            echo "<pre>";var_dump(plugin_dir_path(__DIR__ . 'Lib/Alepay.php'));echo "</pre>";exit();
+            // This is from the class provided by Alepay. Not advisable to mess.
             $callbackUrl = 'http://' . $_SERVER['SERVER_NAME'];
             if ($_SERVER['SERVER_PORT'] != '80') {
                 $callbackUrl = $callbackUrl . ':' . $_SERVER['SERVER_PORT'];
@@ -205,75 +234,15 @@ function woocommerce_payment_nganluong_init()
             $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
             $encryptKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIh+tv4h3y4piNwwX2WaDa7lo0uL7bo7vzp6xxNFc92HIOAo6WPZ8fT+EXURJzORhbUDhedp8B9wDsjgJDs9yrwoOYNsr+c3x8kH4re+AcBx/30RUwWve8h/VenXORxVUHEkhC61Onv2Y9a2WbzdT9pAp8c/WACDPkaEhiLWCbbwIDAQAB";
             $callbackUrl = $callbackUrl . $uri_parts[0];
+            $settings = get_option('woocommerce_alepay_settings', null);
             $alepay = new Alepay(array(
-                // db dev
-                // "apiKey" => "yTsl7Ycg9uhIl04EduMQoOuJWhQdZ6",
-                // "encryptKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9vIbL4rPQSu3TW/MxakvwWplDarB9lBa3jlp2V1IVkPdzk3PbWWAeWM/RuHEGlvRpX8xCQEG5AzC60XXpNUT5JpqldSlyyJVdvsuDLd/BVEZ/rnC4PkOFV07XdgCn1MWwptZJkFnAY2yXTJNBxZeo+f705gQ0Mxc6cTfWjlV3bwIDAQAB",
-                // "checksumKey" => "rYcX5D6Sb7JwUtglw4AWttt2g2MHsE",
-
-                // db test
-                "apiKey" => "0COVspcyOZRNrsMsbHTdt8zesP9m0y",
-                "encryptKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIh+tv4h3y4piNwwX2WaDa7lo0uL7bo7vzp6xxNFc92HIOAo6WPZ8fT+EXURJzORhbUDhedp8B9wDsjgJDs9yrwoOYNsr+c3x8kH4re+AcBx/30RUwWve8h/VenXORxVUHEkhC61Onv2Y9a2WbzdT9pAp8c/WACDPkaEhiLWCbbwIDAQAB",
-                "checksumKey" => "hjuEmsbcohOwgJLCmJlf7N2pPFU1Le",
-
-                // joombooking
-                // "apiKey" => "r7CcL19wBEix1ScJXv7ZXy9NoL0Ub8",
-                // "encryptKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCTM7z4P0XkP7pzMennhtShndJ/FcQbYZ2hxypzpzcRU2zi74B4hlrN2uBFjY7obuF68F7SGt72J0bcM9w74aBjCb5YAQX8JOD6IlZsdSCPzMwEpCALKaIUEsZ/npNQEf/RmMOV8RNfJDY2/6ElvUgCu7+eGkabl6Ete8fiI9TYKwIDAQAB",
-                // "checksumKey" => "mCPjtDOYyGcg3b6IGIl3lSwCbMKq6m",
-
-                // weshop
-                // "apiKey" => "FsIFYpHt42GGDgji5SmLkLDqKRV9tt",
-                // "encryptKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDO8WZFC2Hwj4JmBUZN8naZetVISLyg6CCW+EhmUCPRswblGhjjxbk4+aYzkq0itmQFJ8paUJMeql2NAN4E9cBmQ0OaOqNzHeq/aGJV0sdxEga1UpqGcq2BHXYhDQHe9RQ/rSIJXxR4WhxpcZcxZdj0qrswxoPPubeKFBc+fHBdxQIDAQAB",
-                // "checksumKey" => "RukyMrAGCyLeBCbfeEw2erzzao2htH",
-
-                // live db
-                // "apiKey" => "imt4pZsjbCDE2ioVxnQs71wzNv4TZW",
-                // "encryptKey" => "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVdQKI15hS23XGT9DBQzIardNBBCPa86XeEhMzP2TKKi737SBUXg+z/o3BNhcFZRdTsL5uQpAmBEP3IJYEvclOGgOyWBbpjUf0MXENexaXB9gX9fI/bEiso7k0shBdi8dZt1FdabX/NSTzM+WcQElgLYgXnlwoyCiyzOFL60V4BwIDAQAB",
-                // "checksumKey" => "5iaPavRj8FQXb6eXCj7gFcXC43jsg5",
-                "callbackUrl" => $callbackUrl
-
+                "apiKey" => $settings['api_key'],
+                "encryptKey" => $settings['encrypt_key'],
+                "checksumKey" => $settings['checksum_key'],
+                "callbackUrl" => $settings['redirect_page_id']
             ));
             global $woocommerce;
             $order = new WC_Order($order_id);
-            $order_items = $order->get_items();
-            // Dùng tạm return_url
-            $return_url = get_site_url() . '/nganluong_return?order_id=' . $order_id;
-            //$return_url = 'nganluong.vn';
-            $receiver = $this->merchant_id;
-            $currency = $this->settings['nlcurrency'];
-            $transaction_info = ''; // urlencode("Order#".$order_id." | ".$_SERVER['SERVER_NAME']);
-            $order_description = $order_id;
-            $order_quantity = $order->get_item_count();
-            //$discount = $order->get_cart_discount();
-            $discount = 0;
-            //$tax = $order->get_cart_tax();
-            $tax = 0;
-            $fee_shipping = $order->get_total_shipping_refunded();
-            $product_names = [];
-            foreach ($order_items as $order_item) {
-                $product_names[] = $order_item['name'];
-            }
-            $order_description = implode(', ', $product_names); // this goes into transaction info, which shows up on Ngan Luong as the description of goods
-            $price = $order->get_total() - ($tax + $fee_shipping);
-            $total_amount = $price;
-            $array_items = [
-                'item_name' => $order->get_order_item_totals(),
-                'item_quantity' => $order->get_order_item_totals(),
-                'item_amount' => $total_amount,
-            ];
-//            $payment_method = $_POST['option_payment'];
-//            (isset($_POST['payment_method'])) ? ($payment_method = $_POST['payment_method']) : ($payment_method = get_post_meta($order->get_id(), '_payment_method', true)); // Lưu ý $order->id
-            $payment_method = $_POST['option_payment'];
-//            $payment_method = $order->get_payment_method();
-            $bank_code = @$_POST['bankcode'];
-            $order_code = $order_id;
-            $payment_type = '';
-            $discount_amount = 0;
-            $tax_amount = 0;
-            // Dùng tạm return_url
-//            $return_url = get_site_url() . '/nganluong_return?order_id=' . $order_id;
-            $cancel_url = urlencode('http://localhost/nganluong.vn/checkoutv3?orderid=' . $order_code);
-//            $buyer_fullname = $order->get_billing_first_name() . ' ' . $order->get_billing_last_name();
             $buyerFirstName = $order->get_billing_first_name();
             $buyerLastName = $order->get_billing_last_name();
             $buyerFullName = $buyerFirstName.$buyerLastName;
@@ -281,39 +250,47 @@ function woocommerce_payment_nganluong_init()
             $buyerName = $buyerFullName;
             $buyerEmail = $order->get_billing_email();
             $buyerPhone = $order->get_billing_phone();
-            $buyerAddress = $order->get_formatted_billing_address();
-            $buyerCity = $order->get_billing_city();
-            $postalCode = $order->get_billing_postcode();
-            $merchantSideUserId = 'TUT07979';
-            $buyerPostalCode = '10000';
-            $buyerState = 'Hanoi';
-            $isCardLink = true;
-            $installment = true;
-            $paymentHours = 48;
-            $checkoutType = 2;
-            $buyerCountry = 'Viet Nam';
-            $returnUrl = 'http://' . $_SERVER['SERVER_NAME'] . '/wordpressalepay';
-            $cancelUrl = 'http://' . $_SERVER['SERVER_NAME'] . '/wordpressalepay';
+            $buyerAddress = $order->get_billing_address_1();
+
+            $buyerCity = $order->get_billing_city() || 'Hanoi';
+            $amount = ((int)$order->get_total() >= 3500000) ? $order->get_total() : '3500000';
+            $buyerPostalCode = $order->get_billing_postcode();
+            $buyerState = !empty($order->get_billing_state()) ? $order->get_billing_state() :  'Hanoi';
+            $buyerCountry = !empty($order->get_billing_country()) ?  $order->get_billing_country() : 'Viet Nam';
+            $returnUrl = 'http://' . $_SERVER['SERVER_NAME'] . '/wordpressalepay/';
+            $cancelUrl = 'http://' . $_SERVER['SERVER_NAME'] . '/wordpressalepay/';
             // Dummy data because not important
-            $state = @$order->get_billing_state();
-            $bankCode = 'SACOMBANK';
-            $month = 12;
-            $paymentMethod = 'VISA';
             $orderCode = $order_id;
-            $amount = '3500000';
-//            $amount = $order->get_total();
-//            $totalItem = $order->get_item_count();
-            $totalItem = 1;
+            $_SESSION['orderId']  = $order_id;
+            $totalItem = $order->get_item_count();
             $currency = $order->get_currency();
-            $orderDescription = $order->get_customer_order_notes();
-//            echo "<pre>";var_dump($returnUrl);echo "</pre>";exit();
-            $response = $alepay->sendOrderToAlepayInstallment($paramId, $orderCode, $amount, $currency,
-                $orderDescription, $totalItem, $checkoutType,
-                $installment, $month, $bankCode, $paymentMethod,
-                $returnUrl, $cancelUrl, $buyerName, $buyerEmail,
-                $buyerPhone, $buyerAddress, $buyerCity, $buyerCountry,
-                $paymentHours, $returnUrl, $merchantSideUserId, $buyerPostalCode, $buyerState, $isCardLink);
-            echo  $response;
+            $orderDescription = $order->get_customer_note() || ($buyerName . '-' . $buyerEmail . '-' . $buyerPhone . '-' . $buyerAddress);
+            $response = $alepay->sendOrderToAlepayInstallment($paramId, $orderCode, $amount,
+                                                                                                $currency, $orderDescription, $totalItem,
+                                                                                                $returnUrl, $cancelUrl, $buyerName, $buyerEmail,
+                                                                                                $buyerPhone, $buyerAddress, $buyerCity, $buyerCountry,
+                                                                                                $returnUrl, $buyerPostalCode, $buyerState);
+            if (!empty($response)) {
+                //Cập nhât order với token  $nl_result->token để sử dụng check hoàn thành sau này
+                $settings = get_option('woocommerce_nganluong_settings', null);
+                $old_status = 'wc-' . $order->get_status();
+                $new_status = 'wc-processing';
+                $order->update_status($new_status);
+                $this->orderCode = $orderCode;
+                $note = ': Thanh toán trực tuyến qua Alepay.';
+
+                if (!empty($payment_method)) {
+                    $note .= ' Phương thức thanh toán : ' . $alepay->GetStringPaymentMethod((string)$payment_method);
+                } else {
+                    $note .= '';
+                }
+                $order->add_order_note(sprintf(__('Phương thức thanh toán ' . $note, 'woocommerce')), 0, false);
+                $new_status = $alepay->GetErrorMessage((string)$response->transaction_status);
+                self::log('Cập nhật đơn hàng ID: ' . $order_id . ' trạng thái ' . $new_status);
+                return $response;
+            } else {
+                echo $response;
+            }
         }
 
         function showMessage($content)
@@ -347,59 +324,62 @@ function woocommerce_payment_nganluong_init()
 
         /* Hàm thực hiện xác minh tính đúng đắn của các tham số trả về từ nganluong.vn */
 
-        public static function nganluong_return_handler($order_id)
+        public static function alepay_return_handler($order_id)
         {
             global $woocommerce;
             // This probably could be written better
-            if (isset($_REQUEST['order_id']) && !empty($_REQUEST['order_id']) && $_REQUEST['error_code'] == '00') {
+            if (isset($_REQUEST['data']) && !empty($_REQUEST['checksum'])) {
                 self::log($_SERVER['REMOTE_ADDR'] . json_encode(@$_REQUEST));
-                $settings = get_option('woocommerce_nganluong_settings', null);
-                $order_id = $_REQUEST['order_id'];
-                $nlcheckout = new NL_CheckOutV3($settings['merchant_site_code'], $settings['secure_pass'], $settings['merchant_id'], $settings['nganluong_url']);
-//                echo "<pre>";var_dump($settings);echo "</pre>";exit();
-                $nl_result = $nlcheckout->GetTransactionDetail($_GET['token']);
-                if ((string)$nl_result->transaction_status == '00') {
+                $settings = get_option('woocommerce_alepay_settings', null);
+                $data = $_REQUEST['data'];
+                $checksum = $_REQUEST['checksum'];
+                $decryptData = new AlepayUtils();
+                $decryptData = $decryptData->decryptCallbackData($data, ENDCRYPT_KEY);
+                $jsonDecodeData = json_decode($decryptData);
+                $orderCode = $jsonDecodeData->data;
+                if ($jsonDecodeData->errorCode === "155" && !empty($jsonDecodeData->data)) {
+                    // What Trick
                     $order = new WC_Order($order_id);
+                    $alepay = new Alepay(array(
+                        "apiKey" => $settings['api_key'],
+                        "encryptKey" => $settings['encrypt_key'],
+                        "checksumKey" => $settings['checksum_key'],
+                        "callbackUrl" => $settings['redirect_page_id']
+                    ));
+                    echo "<pre>";var_dump($order_id);echo "</pre>";exit();
                     // phương thức
                     // số dư ví
                     // Xác thực mã của chủ web với mã trả về từ nganluong.vn
                     // status tạm giữ 2 ngày nên để chế độ pending
 //                    $new_order_status = $settings['status_order'];
                     // tuy nhiên ta sẽ fix cứng status này là completed
-                    $new_order_status = 'wc-processing';
+                    $new_order_status = 'wc-completed';
                     $old_status = 'wc-' . $order->get_status();
-                    if ($new_order_status !== $old_status) {
-                        $note = 'Thanh toán trực tuyến qua Ngân Lượng.';
-                        if ((string)$nl_result->payment_type == 2) {
-                            $note .= ' Với hình thức thanh toán tạm giữ';
-                        } else if ((string)$nl_result->payment_type == 1) {
-                            $note .= ' Với hình thức thanh toán ngay';
-                        }
-                        $note .= ' .Mã thanh toán: ' . (string)$nl_result->transaction_id;
-                        $order->update_status($new_order_status);
-                        $order->add_order_note(sprintf(__('Cập nhật trạng thái từ %1$s thành %2$s.' . $note, 'woocommerce'), wc_get_order_status_name($old_status), wc_get_order_status_name($new_order_status)), 0, false);
-                        $new_status = $nlcheckout->GetErrorMessage((string)$nl_result->transaction_status);
-                        self::log('Cập nhật đơn hàng ID: ' . $order_id . ' trạng thái ' . $new_status);
-                    }
+                    $note = 'Thanh toán trực tuyến qua Alepay.';
+                    $note .= ' .Mã Giao Dịch: ' . $orderCode;
+                    $order->update_status('wc-completed');
+                    $order->add_order_note(sprintf(__('Cập nhật trạng thái từ %1$s thành %2$s.' . $note, 'woocommerce'),
+                        wc_get_order_status_name($old_status), wc_get_order_status_name($new_order_status)), 0, false);
+                    $new_status = $alepay->getErrorMessage($jsonDecodeData->errorCode);
+                    self::log('Cập nhật đơn hàng ID: ' . $orderCode . ' trạng thái ' . $new_status);
                     // Remove cart
                     $woocommerce->cart->empty_cart();
                     // Empty awaiting payment session
-                    unset($_SESSION['order_awaiting_payment']);
+//                    unset($_SESSION['order_awaiting_payment']);
                     wp_redirect(get_permalink($settings['redirect_page_id']));
                     exit;
                 }
             }
         }
-
     }
 
-    function woocommerce_add_NganLuong_gateway($methods)
+    function woocommerce_add_Alepay_gateway($methods)
     {
-        $methods[] = 'WC_Gateway_NganLuong';
+        $methods[] = 'WC_Gateway_Alepay';
         return $methods;
     }
 
-    add_filter('woocommerce_payment_gateways', 'woocommerce_add_NganLuong_gateway');
+    add_filter('woocommerce_payment_gateways', 'woocommerce_add_Alepay_gateway');
 
 }
 

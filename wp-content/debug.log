@@ -374,3 +374,401 @@ Stack trace:
 [02-Jun-2017 06:17:30 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
 [02-Jun-2017 06:17:30 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
 [02-Jun-2017 06:17:30 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:03:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:04:20 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:04:21 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:04:21 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:04:21 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:04:21 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:04:21 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:05:59 UTC] PHP Fatal error:  Uncaught Error: Class 'Alepay' not found in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:209
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(187): WC_Gateway_NganLuong->generate_NganLuongVN_url(104)
+#1 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(766): WC_Gateway_NganLuong->process_payment(104)
+#2 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(938): WC_Checkout->process_order_payment(104, 'alepay')
+#3 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-ajax.php(390): WC_Checkout->process_checkout()
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_AJAX::checkout('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters('', Array)
+#6 C:\xa in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 209
+[02-Jun-2017 07:13:07 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:07 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:07 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:07 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:07 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:07 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:22 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:22 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:22 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:22 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:22 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:13:22 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:27:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:27:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:27:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:27:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:27:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:27:29 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:28:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Alepay' not found in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:212
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(190): WC_Gateway_NganLuong->generate_NganLuongVN_url(104)
+#1 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(766): WC_Gateway_NganLuong->process_payment(104)
+#2 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(938): WC_Checkout->process_order_payment(104, 'alepay')
+#3 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-ajax.php(390): WC_Checkout->process_checkout()
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_AJAX::checkout('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters('', Array)
+#6 C:\xa in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 212
+[02-Jun-2017 07:29:07 UTC] PHP Fatal error:  Uncaught Error: Class 'Alepay' not found in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:212
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(190): WC_Gateway_NganLuong->generate_NganLuongVN_url(104)
+#1 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(766): WC_Gateway_NganLuong->process_payment(104)
+#2 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(938): WC_Checkout->process_order_payment(104, 'alepay')
+#3 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-ajax.php(390): WC_Checkout->process_checkout()
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_AJAX::checkout('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters('', Array)
+#6 C:\xa in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 212
+[02-Jun-2017 07:30:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:30:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:30:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:30:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:30:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:30:28 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:36:01 UTC] PHP Deprecated:  Function mcrypt_create_iv() is deprecated in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Crypt\Random.php on line 73
+[02-Jun-2017 07:49:42 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 301
+[02-Jun-2017 08:18:49 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'WC_Gateway_NganLuong' not found in C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php on line 298
+[02-Jun-2017 08:18:51 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 258
+[02-Jun-2017 08:19:51 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'WC_Gateway_NganLuong' not found in C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php on line 298
+[02-Jun-2017 08:20:54 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'WC_Gateway_NganLuong' not found in C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php on line 298
+[02-Jun-2017 08:23:45 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'WC_Gateway_NganLuong' not found in C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php on line 298
+[02-Jun-2017 08:24:42 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'WC_Gateway_NganLuong' not found in C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php on line 298
+[02-Jun-2017 08:27:26 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 08:29:17 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 258
+[02-Jun-2017 08:29:17 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 08:31:31 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 174
+[02-Jun-2017 08:35:55 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 119
+[02-Jun-2017 08:37:11 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 119
+[02-Jun-2017 08:37:51 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 228
+[02-Jun-2017 08:39:34 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 119
+[02-Jun-2017 08:44:50 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\wordpressalepay\wp-admin\includes\dashboard.php on line 1227
+[02-Jun-2017 09:02:47 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 271
+[02-Jun-2017 09:03:00 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 271
+[02-Jun-2017 09:07:04 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 275
+[02-Jun-2017 09:08:31 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 276
+[02-Jun-2017 09:09:32 UTC] PHP Parse error:  syntax error, unexpected ')' in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 276
+[02-Jun-2017 09:24:08 UTC] PHP Notice:  Undefined variable: nlcheckout in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 291
+[02-Jun-2017 09:24:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function GetErrorMessage() on null in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:291
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 291
+[02-Jun-2017 09:52:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 291 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(291): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[02-Jun-2017 09:52:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 291 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(291): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[02-Jun-2017 09:53:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 291 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(291): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[02-Jun-2017 09:54:39 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:291
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 291
+[02-Jun-2017 10:21:57 UTC] PHP Recoverable fatal error:  Object of class WP could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 292
+[02-Jun-2017 10:24:39 UTC] PHP Parse error:  syntax error, unexpected '$old_status' (T_VARIABLE) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[02-Jun-2017 10:24:45 UTC] PHP Parse error:  syntax error, unexpected '$old_status' (T_VARIABLE) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[02-Jun-2017 10:24:57 UTC] PHP Parse error:  syntax error, unexpected '$old_status' (T_VARIABLE) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[02-Jun-2017 10:25:31 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 10:25:31 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 10:25:31 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 10:26:04 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 10:26:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 10:26:04 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 10:28:47 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 10:28:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 10:28:47 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 10:31:36 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 278
+[02-Jun-2017 10:31:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 292 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(292): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[02-Jun-2017 10:32:00 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 278
+[02-Jun-2017 10:34:08 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 10:34:08 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 10:34:08 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 10:34:19 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 10:34:19 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 10:34:19 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 10:38:25 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 280
+[02-Jun-2017 10:38:25 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 281
+[02-Jun-2017 11:24:56 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:24:56 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:24:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:24:56 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:26:21 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:26:21 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:26:21 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:26:21 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:30:17 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 250
+[02-Jun-2017 11:32:04 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 250
+[02-Jun-2017 11:33:38 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:33:38 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:33:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:33:38 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:34:10 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:34:10 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:34:11 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:34:11 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:34:34 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:34:34 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:34:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:34:34 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:34:55 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:35:16 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:36:31 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:38:51 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:38:51 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:38:51 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:38:51 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:39:44 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:39:44 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[02-Jun-2017 11:39:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[02-Jun-2017 11:39:44 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[02-Jun-2017 11:40:18 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:41:22 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[02-Jun-2017 11:47:57 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 249
+[03-Jun-2017 02:19:37 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[03-Jun-2017 02:19:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 175
+[03-Jun-2017 02:19:37 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 181
+[03-Jun-2017 02:20:14 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 173
+[03-Jun-2017 02:23:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method WC_Gateway_Alepay::generate_NganLuongVN_url() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:184
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(766): WC_Gateway_Alepay->process_payment(115)
+#1 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(938): WC_Checkout->process_order_payment(115, 'alepay')
+#2 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-ajax.php(390): WC_Checkout->process_checkout()
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_AJAX::checkout('')
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\inc in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 184
+[03-Jun-2017 02:24:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method WC_Gateway_Alepay::generate_Alepay_urll() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:184
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(766): WC_Gateway_Alepay->process_payment(115)
+#1 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-checkout.php(938): WC_Checkout->process_order_payment(115, 'alepay')
+#2 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\class-wc-ajax.php(390): WC_Checkout->process_checkout()
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_AJAX::checkout('')
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\include in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 184
+[03-Jun-2017 02:28:33 UTC] PHP Warning:  strip_tags() expects parameter 1 to be string, array given in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 232
+[03-Jun-2017 03:01:33 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 119
+[03-Jun-2017 03:02:03 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 119
+[03-Jun-2017 03:02:52 UTC] PHP Recoverable fatal error:  Object of class stdClass could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce\includes\log-handlers\class-wc-log-handler-file.php on line 119
+[03-Jun-2017 03:05:36 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[03-Jun-2017 03:05:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 300 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(300): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[03-Jun-2017 03:16:39 UTC] PHP Parse error:  syntax error, unexpected '$order' (T_VARIABLE) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[03-Jun-2017 03:17:05 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 287
+[03-Jun-2017 03:17:19 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[03-Jun-2017 03:17:22 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[03-Jun-2017 03:18:07 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 301 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(301): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[03-Jun-2017 03:18:28 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 301 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(301): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[03-Jun-2017 03:19:22 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:301
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 301
+[03-Jun-2017 03:20:49 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:301
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 301
+[03-Jun-2017 03:24:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Alepay::__construct(), 0 passed in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 301 and exactly 1 expected in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php:35
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php(301): Alepay->__construct()
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#5 C:\xampp\htdocs\wordpressalepay\wp-inclu in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 35
+[03-Jun-2017 03:32:53 UTC] PHP Recoverable fatal error:  Object of class WP could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 314
+[03-Jun-2017 03:34:33 UTC] PHP Recoverable fatal error:  Object of class WP could not be converted to string in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 314
+[03-Jun-2017 03:35:34 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 319
+[03-Jun-2017 03:35:53 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 319
+[03-Jun-2017 03:42:14 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\wordpressalepay\wp-admin\includes\dashboard.php on line 1227
+[03-Jun-2017 03:42:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:42:47 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:42:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:42:56 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:43:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:43:28 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:43:44 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:43:44 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:43:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:43:54 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:52:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:52:47 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:52:57 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:52:57 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:53:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 190
+[03-Jun-2017 03:53:15 UTC] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 195
+[03-Jun-2017 03:54:32 UTC] PHP Parse error:  syntax error, unexpected ';' in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 239
+[03-Jun-2017 04:24:10 UTC] PHP Notice:  Undefined index: merchant_site_code in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 85
+[03-Jun-2017 04:24:10 UTC] PHP Notice:  Undefined index: secure_pass in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 87
+[03-Jun-2017 04:25:14 UTC] PHP Notice:  Undefined index: alepay_url in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 84
+[03-Jun-2017 04:25:14 UTC] PHP Notice:  Undefined index: merchant_site_code in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 85
+[03-Jun-2017 04:25:14 UTC] PHP Notice:  Undefined index: secure_pass in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 87
+[03-Jun-2017 04:49:58 UTC] PHP Notice:  Undefined index: checksum_key in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 77
+[03-Jun-2017 04:52:25 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 226
+[03-Jun-2017 04:52:25 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 227
+[03-Jun-2017 04:52:25 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 228
+[03-Jun-2017 04:52:25 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 229
+[03-Jun-2017 04:53:29 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 225
+[03-Jun-2017 04:53:29 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 226
+[03-Jun-2017 04:53:29 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 227
+[03-Jun-2017 04:53:29 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 228
+[03-Jun-2017 04:54:01 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 225
+[03-Jun-2017 04:54:01 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 226
+[03-Jun-2017 04:54:01 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 227
+[03-Jun-2017 04:54:01 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 228
+[03-Jun-2017 04:54:18 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 225
+[03-Jun-2017 04:54:18 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 226
+[03-Jun-2017 04:54:18 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 227
+[03-Jun-2017 04:54:18 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 228
+[03-Jun-2017 04:58:27 UTC] PHP Notice:  Undefined variable: settings in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 225
+[03-Jun-2017 05:00:35 UTC] PHP Notice:  Undefined variable: alepay in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 327
+[03-Jun-2017 05:00:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getErrorMessage() on null in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:327
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 327
+[04-Jun-2017 00:42:26 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\wordpressalepay\wp-includes\wp-db.php on line 1877
+[04-Jun-2017 00:43:50 UTC] PHP Notice:  Undefined offset: 1 in C:\xampp\htdocs\wordpressalepay\wp-admin\includes\dashboard.php on line 1227
+[04-Jun-2017 01:09:08 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 01:10:23 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 01:22:44 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 01:30:05 UTC] PHP Notice:  Undefined variable: new_status in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 338
+[04-Jun-2017 01:59:58 UTC] PHP Notice:  Undefined property: stdClass::$transaction_status in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 289
+[04-Jun-2017 01:59:58 UTC] PHP Notice:  Undefined index:  in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 462
+[04-Jun-2017 01:59:58 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 02:02:57 UTC] PHP Notice:  Undefined property: stdClass::$transaction_status in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 286
+[04-Jun-2017 02:02:57 UTC] PHP Notice:  Undefined index:  in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 462
+[04-Jun-2017 02:02:57 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 02:04:55 UTC] order_id was called incorrectly. Order properties should not be accessed directly. Backtrace: require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment, WC_Gateway_Alepay->generate_Alepay_url, WC_Abstract_Legacy_Order->__get, wc_doing_it_wrong. This message was added in version 3.0.
+[04-Jun-2017 02:06:56 UTC] PHP Notice:  Undefined property: stdClass::$transaction_status in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 287
+[04-Jun-2017 02:06:56 UTC] PHP Notice:  Undefined index:  in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 462
+[04-Jun-2017 02:06:56 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 02:07:51 UTC] PHP Notice:  Undefined variable: _SESSION in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 347
+[04-Jun-2017 02:10:09 UTC] PHP Notice:  Undefined property: stdClass::$transaction_status in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 288
+[04-Jun-2017 02:10:09 UTC] PHP Notice:  Undefined index:  in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\Lib\Alepay.php on line 462
+[04-Jun-2017 02:10:09 UTC] WordPress database error Table 'wordpressalepay.woocommerce_payment_tokens' doesn't exist for query SHOW FULL COLUMNS FROM `woocommerce_payment_tokens` made by require('C:\xampp\htdocs\wordpressalepay\wp-blog-header.php'), require_once('C:\xampp\htdocs\wordpressalepay\wp-includes\template-loader.php'), do_action('template_redirect'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::do_wc_ajax, do_action('wc_ajax_checkout'), WP_Hook->do_action, WP_Hook->apply_filters, WC_AJAX::checkout, WC_Checkout->process_checkout, WC_Checkout->process_order_payment, WC_Gateway_Alepay->process_payment
+[04-Jun-2017 02:11:12 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:348
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 348
+[04-Jun-2017 02:12:07 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php:348
+Stack trace:
+#0 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(298): WC_Gateway_Alepay::alepay_return_handler(Object(WP))
+#1 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp-hook.php(323): WP_Hook->apply_filters(NULL, Array)
+#2 C:\xampp\htdocs\wordpressalepay\wp-includes\plugin.php(515): WP_Hook->do_action(Array)
+#3 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(386): do_action_ref_array('parse_request', Array)
+#4 C:\xampp\htdocs\wordpressalepay\wp-includes\class-wp.php(733): WP->parse_request('')
+#5 C:\xampp\htdocs\wordpressalepay\wp-includes\functions.php(955): WP->main('')
+#6 C:\xampp\htdocs\wordpressalepay\wp-blog-header.php(16): wp()
+#7 C:\xampp\htdocs\wordpressalepay\index.php(17): require('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\wordpressalepay\wp-content\plugins\woocommerce-gateway-nganluong-checkout\woocommerce-gateway-nganluong-checkout.php on line 348

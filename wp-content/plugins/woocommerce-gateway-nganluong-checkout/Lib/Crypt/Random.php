@@ -69,9 +69,9 @@ if (!function_exists('crypt_random_string')) {
     {
         if (CRYPT_RANDOM_IS_WINDOWS) {
             // method 1. prior to PHP 5.3, mcrypt_create_iv() would call rand() on windows
-            if (extension_loaded('mcrypt') && version_compare(PHP_VERSION, '5.3.0', '>=')) {
-                return mcrypt_create_iv($length);
-            }
+//            if (extension_loaded('mcrypt') && version_compare(PHP_VERSION, '5.3.0', '>=')) {
+//                return mcrypt_create_iv($length,MCRYPT_DEV_URANDOM);
+//            }
             // method 2. openssl_random_pseudo_bytes was introduced in PHP 5.3.0 but prior to PHP 5.3.4 there was,
             // to quote <http://php.net/ChangeLog-5.php#5.3.4>, "possible blocking behavior". as of 5.3.4
             // openssl_random_pseudo_bytes and mcrypt_create_iv do the exact same thing on Windows. ie. they both
